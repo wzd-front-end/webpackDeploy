@@ -3,7 +3,9 @@
   "version": "1.0.0",
   "description": "learn how to deploy webpack",
   "private": true,
-  "scripts": {},
+  "scripts": {
+    "bundle": "webpack"
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/wzd-front-end/webpackDeploy.git"
