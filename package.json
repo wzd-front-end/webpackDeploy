@@ -1,0 +1,19 @@
+{
+  "name": "webpack-deploy",
+  "version": "1.0.0",
+  "description": "learn how to deploy webpack",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/wzd-front-end/webpackDeploy.git"
+  },
+  "author": "wzd",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/wzd-front-end/webpackDeploy/issues"
+  },
+  "homepage": "https://github.com/wzd-front-end/webpackDeploy#readme"
+}
