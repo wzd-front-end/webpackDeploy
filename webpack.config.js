@@ -11,13 +11,31 @@ module.exports = {
     module: {
         rules: [
             {
-                test: /\.jpg$/,
+                test: /\.(jpg|png|gif)$/,
                 use: {
-                    loader: "file-loader",
+                    // file-loader 和url-loader的区别主要能转化成base64字符串
+                    loader: "url-loader",
                     options: {
-                        name: '[name].[ext]'
+                        // 使用占位符,确定打包后名称
+                        name: '[name]_[hash].[ext]',
+                        // 确定打包后输出文件所在的文件夹
+                        outputPath: 'images/',
+                        // 临界值，确定是打包成文件还是base64字符串
+                        limit: 2048
                     }
                 }
+            }, {
+                test: /\.scss$/,
+                // css-loader分析出几个css文件之间的关系，最终把这些css文件合并成一段css文件
+                // style-loader 在得到css-loader生成的内容之后，会把这段内容挂载到页面的style标签内
+                // postcss-loader 主要作用是处理css前缀问题，兼容多浏览器
+                // loader的执行顺序是从下到上，从右到左
+                use: [
+                    'style-loader',
+                    'css-loader',
+                    'sass-loader',
+                    'postcss-loader'
+                ]
             }
         ]
     },
