@@ -9,9 +9,15 @@ yarn-error.log*
 selenium-debug.log
 
 # Editor directories and files
-.idea
 .vscode
 *.suo
 *.ntvs*
 *.njsproj
 *.sln
+
+
+# IntelliJ project files
+.idea
+*.iml
+out
+gen
