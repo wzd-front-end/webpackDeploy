@@ -4,7 +4,8 @@
   "description": "learn how to deploy webpack",
   "private": true,
   "scripts": {
-    "bundle": "webpack"
+    "watch": "webpack --watch",
+    "start": "webpack-dev-server"
   },
   "repository": {
     "type": "git",
@@ -17,7 +18,11 @@
   },
   "homepage": "https://github.com/wzd-front-end/webpackDeploy#readme",
   "devDependencies": {
+    "@babel/core": "^7.4.5",
+    "@babel/plugin-transform-runtime": "^7.4.4",
+    "@babel/preset-env": "^7.4.5",
     "autoprefixer": "^9.5.1",
+    "babel-loader": "^8.0.6",
     "clean-webpack-plugin": "^2.0.2",
     "css-loader": "^2.1.1",
     "file-loader": "^3.0.1",
@@ -29,6 +34,13 @@
     "style-loader": "^0.23.1",
     "url-loader": "^1.1.2",
     "webpack": "^4.32.0",
-    "webpack-cli": "^3.3.2"
+    "webpack-cli": "^3.3.2",
+    "webpack-dev-server": "^3.4.1"
+  },
+  "dependencies": {
+    "@babel/polyfill": "^7.4.4",
+    "@babel/runtime": "^7.4.5",
+    "@babel/runtime-corejs2": "^7.4.5",
+    "core-js": "^3.1.2"
   }
 }
