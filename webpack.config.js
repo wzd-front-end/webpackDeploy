@@ -120,7 +120,8 @@ module.exports = {
                 //                 chrome: '67',
                 //                 safari: '11.1'
                 //             },
-                //             // 加上这句，在使用@babel/polyfill的时候，只有被使用的函数或变量会引入对应的垫片，减小对应的文件的大小
+                //             // 加上这句，在使用@babel/polyfill的时候，只有被使用的函数或变量会引入对应的垫片，减小对应的文件的大小，
+                //             // 实际上，我们使用了useBuiltIns会自动引入polyfill，不需要再次在业务逻辑引入，且，corejs是polyfill的核心代码库
                 //             useBuiltIns: 'usage',
                 //             corejs: 2
                 //         }
