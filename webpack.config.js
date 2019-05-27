@@ -1,6 +1,7 @@
 const path = require('path')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 const CleanWebpackPlugin = require('clean-webpack-plugin')
+const webpack = require('webpack')
 
 module.exports = {
     // 有两个值可以选择，development 和 production ，主要区别是，前者为开发环境，不使用压缩，且使用eval()执行，后者为生存环境，使用压缩减小文件大小
@@ -23,7 +24,11 @@ module.exports = {
         // 运行时自动打开浏览器
         open: true,
         // 设置访问端口号
-        port: 8080
+        port: 8080,
+        // 开启hot-module-replacement
+        hot: true,
+        // 就算不自动刷新浏览器也不刷新
+        hotOnly: true
         // 代理
         // 如果需要代理多个地址，可将对象改为对象数组，并在每个对象中增加context数组，如下
         // proxy: [{
@@ -100,6 +105,14 @@ module.exports = {
                 ]
             },
             {
+                test: /\.css$/,
+                use: [
+                    'style-loader',
+                    'css-loader',
+                    'postcss-loader'
+                ]
+            },
+            {
                 test: /\.js$/,
                 exclude: /node_modules/,
                 // 只是babel 和 webpack进行通讯的桥梁，实际上不会将es6转化为es5，还需要另外的模块来辅助它，比如@babel/preset-env,它包含了es6转化为es5的规则
@@ -149,7 +162,8 @@ module.exports = {
         new HtmlWebpackPlugin({
             template: 'src/index.html'
         }),
-        new CleanWebpackPlugin()
+        new CleanWebpackPlugin(),
+        new webpack.HotModuleReplacementPlugin()
     ],
     output: {
         // publicPath: "www.cdn",
