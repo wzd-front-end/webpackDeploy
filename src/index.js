@@ -1,3 +1,15 @@
+import React, {Component} from 'react'
+import ReactDom from 'react-dom'
+
+class App extends Component {
+    render() {
+        return <div>Hello World</div>
+    }
+}
+
+ReactDom.render(<App />, document.getElementById('root'))
+
+
 // import avatar from './avatar.jpg'
 // import style from './style.scss'
 //
@@ -22,17 +34,21 @@
 // arr.map(item => {
 //     console.log(item);
 // })
-import './styles.css'
 
-var btn =  document.createElement('button')
-btn.innerHTML = '新增'
-document.body.appendChild(btn)
+//
+// import './styles.css'
+//
+// var btn =  document.createElement('button')
+// btn.innerHTML = '新增'
+// document.body.appendChild(btn)
+//
+// btn.onclick = function () {
+//     var div = document.createElement('div')
+//     div.innerHTML = 'item'
+//     document.body.appendChild(div)
+// }
 
-btn.onclick = function () {
-    var div = document.createElement('div')
-    div.innerHTML = 'item'
-    document.body.appendChild(div)
-}
+
 // 如果支持module.hot
 // if (module.hot) {
 //     // 如果文件number发生了改变， 执行后面的函数

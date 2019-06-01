@@ -122,6 +122,7 @@ module.exports = {
                 // preset-env 是做语法转换的，有一些变量和函数还是缺失的，需要babel-polyfill来补充低版本的兼容性
                 // 使用上下两种转换方式，主要区别在于，presets方式主要是用于业务逻辑代码的打包，plugins主要是用于组件库或者类库的打包
                 // 使用plugins 相对于presets可以有效的避免全局污染，它会以闭包的形式注入或间接的帮助组件去引入
+                // presets中的执行顺序是从下往上，从右到左
 
                 // presets: [
                 //     [
