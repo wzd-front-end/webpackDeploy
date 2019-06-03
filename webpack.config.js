@@ -166,6 +166,10 @@ module.exports = {
         new CleanWebpackPlugin(),
         new webpack.HotModuleReplacementPlugin()
     ],
+    optimization: {
+        // 有使用的导出才会被引入，删除多余的代码，在webpack4中，只要是production模式，都会自动开启Tree sharing
+        usedExports: true
+    },
     output: {
         // publicPath: "www.cdn",
         filename: '[name].js',

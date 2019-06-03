@@ -1,5 +1,6 @@
 {
   "name": "webpack-deploy",
+  "sideEffects": ["*.css", "@babel/polyfill"],
   "version": "1.0.0",
   "description": "learn how to deploy webpack",
   "private": true,
