@@ -1,13 +1,17 @@
-import React, {Component} from 'react'
-import ReactDom from 'react-dom'
+import _ from 'lodash'
+console.log(_.join(['a', 'b', 'c'], '****'))
 
-class App extends Component {
-    render() {
-        return <div>Hello World</div>
-    }
-}
 
-ReactDom.render(<App />, document.getElementById('root'))
+// import React, {Component} from 'react'
+// import ReactDom from 'react-dom'
+//
+// class App extends Component {
+//     render() {
+//         return <div>Hello World</div>
+//     }
+// }
+//
+// ReactDom.render(<App/>, document.getElementById('root'))
 
 
 // import avatar from './avatar.jpg'
