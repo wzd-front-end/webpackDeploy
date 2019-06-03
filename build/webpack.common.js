@@ -118,6 +118,45 @@ module.exports = {
         }),
         new CleanWebpackPlugin()
     ],
+    // 配置该值后，代码会实现代码分割的功能，包括同步和异步的，异步的需要增加一个@babel/plugin-syntax-dynamic-import插件，
+    // 配置到.babelrc中
+    optimization: {
+        splitChunks: {
+            // 对哪一些代码进行分割，配置值包括'all', 'asynx', 'initial',同步的进行代码分割，还需要配置cacheGroups
+            chunks: "all",
+            // 配置代码分割的最小文件大小
+            minSize: 30000,
+            // // 配置后，如果打包后的文件大小超过该值，则会尝试把打包后的文件进行二次拆分，但不一样可以再次进行代码分割
+            // maxSize: 0,
+            // 当一个模块被用了至少多少次的时候，才对它进行代码分割
+            minChunks: 1,
+            // 异步加载的模块数的最大值，大于该值，不会在帮你进行代码分割
+            maxAsyncRequests: 5,
+            // 同步加载的模块数的最大值，大于该值，不会在帮你进行代码分割
+            maxInitialRequests: 3,
+            // cacheGroups和文件之间的连接符，如例子是main~vendors
+            automaticNameDelimiter: '~',
+            // 让cacheGroups打包后的文件名有效
+            name: true,
+            // 打包同步代码不仅仅会走chunks配置项，还会走cacheGroups配置项
+            cacheGroups: {
+                // 指定打包后的模块配置
+                vendors: {
+                    test: /[\\/]node_modules[\\/]/,
+                    // 权值，值越大，优先级越高，指定打包后所走的文件打包路径
+                    priority: -10,
+                    filename: "vendors.js"
+                },
+                default: {
+                    minChunks: 2,
+                    priority: -20,
+                    // 如果一个模块被打包过了，再打包的时候就忽略这个模块，直接使用之前被打包的模块即可
+                    reuseExistingChunk: true,
+                    filename: "common.js"
+                }
+            }
+        }
+    },
     output: {
         filename: "[name].js",
         path: path.resolve(__dirname, '../dist')

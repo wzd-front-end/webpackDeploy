@@ -1,5 +1,16 @@
-import _ from 'lodash'
-console.log(_.join(['a', 'b', 'c'], '****'))
+function getComponent() {
+    return import(/* webpackChunkName: 'lodash ' */'lodash').then(({default: _}) => {
+        var element = document.createElement('div')
+        element.innerHtml = _.join(['dell', 'lee'], '-')
+        return element
+    })
+}
+getComponent().then(element => {
+    document.body.appendChild(element)
+})
+
+// import _ from 'lodash'
+// console.log(_.join(['a', 'b', 'c'], '****'))
 
 
 // import React, {Component} from 'react'
