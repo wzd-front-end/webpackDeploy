@@ -39,33 +39,6 @@ module.exports = {
                 }
             },
             {
-                test: /\.scss$/,
-                // css-loader分析出几个css文件之间的关系，最终把这些css文件合并成一段css文件
-                // style-loader 在得到css-loader生成的内容之后，会把这段内容挂载到页面的style标签内
-                // postcss-loader 主要作用是处理css前缀问题，兼容多浏览器
-                // loader的执行顺序是从下到上，从右到左
-                use: [
-                    'style-loader',
-                    {
-                        loader: 'css-loader',
-                        options: {
-                            importLoaders: 2, // 用于在css/scss文件中引入css/scss文件的打包，这样在样式文件中引入的样式文件就得重新经过指定的往上的个数loader
-                            modules: true //开启css样式模块化的开关，默认是全局作用域
-                        }
-                    },
-                    'sass-loader',
-                    'postcss-loader'
-                ]
-            },
-            {
-                test: /\.css$/,
-                use: [
-                    'style-loader',
-                    'css-loader',
-                    'postcss-loader'
-                ]
-            },
-            {
                 test: /\.js$/,
                 exclude: /node_modules/,
                 // 只是babel 和 webpack进行通讯的桥梁，实际上不会将es6转化为es5，还需要另外的模块来辅助它，比如@babel/preset-env,它包含了es6转化为es5的规则
@@ -121,6 +94,8 @@ module.exports = {
     // 配置该值后，代码会实现代码分割的功能，包括同步和异步的，异步的需要增加一个@babel/plugin-syntax-dynamic-import插件，
     // 配置到.babelrc中
     optimization: {
+        // 有使用的导出才会被引入，删除多余的代码，在webpack4中，只要是production模式，都会自动开启Tree sharing
+        usedExports: true,
         splitChunks: {
             // 对哪一些代码进行分割，配置值包括'all', 'asynx', 'initial',同步的进行代码分割，还需要配置cacheGroups
             chunks: "all",
@@ -159,6 +134,7 @@ module.exports = {
     },
     output: {
         filename: "[name].js",
+        chunkFilename: "[name].[chunkhash].js",
         path: path.resolve(__dirname, '../dist')
     }
 }

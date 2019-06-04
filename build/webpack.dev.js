@@ -49,12 +49,39 @@ const devConfig = {
         //     }
         // }
     },
+    module: {
+        rules: [
+            {
+                test: /\.scss$/,
+                // css-loader分析出几个css文件之间的关系，最终把这些css文件合并成一段css文件
+                // style-loader 在得到css-loader生成的内容之后，会把这段内容挂载到页面的style标签内
+                // postcss-loader 主要作用是处理css前缀问题，兼容多浏览器
+                // loader的执行顺序是从下到上，从右到左
+                use: [
+                    'style-loader',
+                    {
+                        loader: 'css-loader',
+                        options: {
+                            importLoaders: 2, // 用于在css/scss文件中引入css/scss文件的打包，这样在样式文件中引入的样式文件就得重新经过指定的往上的个数loader
+                            modules: true //开启css样式模块化的开关，默认是全局作用域
+                        }
+                    },
+                    'sass-loader',
+                    'postcss-loader'
+                ]
+            },
+            {
+                test: /\.css$/,
+                use: [
+                    'style-loader',
+                    'css-loader',
+                    'postcss-loader'
+                ]
+            }
+        ]
+    },
     plugins: [
         new webpack.HotModuleReplacementPlugin()
-    ],
-    optimization: {
-        // 有使用的导出才会被引入，删除多余的代码，在webpack4中，只要是production模式，都会自动开启Tree sharing
-        usedExports: true
-    }
+    ]
 }
 module.exports = merge(commonConfig, devConfig)
