@@ -119,15 +119,13 @@ module.exports = {
                 vendors: {
                     test: /[\\/]node_modules[\\/]/,
                     // 权值，值越大，优先级越高，指定打包后所走的文件打包路径
-                    priority: -10,
-                    filename: "vendors.js"
+                    priority: -10
                 },
                 default: {
                     minChunks: 2,
                     priority: -20,
                     // 如果一个模块被打包过了，再打包的时候就忽略这个模块，直接使用之前被打包的模块即可
-                    reuseExistingChunk: true,
-                    filename: "common.js"
+                    reuseExistingChunk: true
                 }
             }
         }
