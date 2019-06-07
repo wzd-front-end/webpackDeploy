@@ -1,6 +1,7 @@
 const path = require("path")
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 const CleanWebpackPlugin = require('clean-webpack-plugin')
+//
 
 module.exports = {
     // 配置入口文件，前面的为名称，在打包输出的时候，可以根据名称生成对应名称的打包后输出文件
@@ -89,11 +90,22 @@ module.exports = {
         new HtmlWebpackPlugin({
             template: 'src/index.html'
         }),
-        new CleanWebpackPlugin()
+        new CleanWebpackPlugin(),
+        // 配置该项后，可以在遇到$的时候自动调用jquery,而不用我们手动去引入，是一种模块内自动引入的方式
+        // new webpack.ProvidePlugin({
+        //     $: 'jquery',
+        //    // 代表着_join是lodash下面的join
+        //     _join: ['lodash', 'join']
+        // })
     ],
     // 配置该值后，代码会实现代码分割的功能，包括同步和异步的，异步的需要增加一个@babel/plugin-syntax-dynamic-import插件，
     // 配置到.babelrc中
     optimization: {
+        // 配置后，打包后会生成mainfest，是包与包之间的关系，webpack4之前需要这样配置，才不会因为每次打包生成的mainfest不用而导致hash值发生改变，这么是优化缓存
+        // 配置后会把mainfest抽出一个单独的文件，这样就不会影响其他文件
+        runtimeChunk: {
+            name: 'runtime'
+        },
         // 有使用的导出才会被引入，删除多余的代码，在webpack4中，只要是production模式，都会自动开启Tree sharing
         usedExports: true,
         splitChunks: {
@@ -129,10 +141,5 @@ module.exports = {
                 }
             }
         }
-    },
-    output: {
-        filename: "[name].js",
-        chunkFilename: "[name].[chunkhash].js",
-        path: path.resolve(__dirname, '../dist')
     }
 }

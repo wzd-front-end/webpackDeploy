@@ -60,7 +60,12 @@ const prodConfig = {
             // 间接被引入的走chunkFilename
             chunkFilename: '[name].chunk.css'
         })
-    ]
+    ],
+    output: {
+        filename: "[name].[chunkhash].js",
+        chunkFilename: "[name].[chunkhash].js",
+        path: path.resolve(__dirname, '../dist')
+    }
 }
 
 module.exports = merge(commonConfig, prodConfig);
