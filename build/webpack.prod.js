@@ -2,6 +2,8 @@ const merge = require('webpack-merge')
 const commonConfig = require('./webpack.common')
 const MiniCssExtractPlugin = require('mini-css-extract-plugin')
 const OptimizeCssAssetsPlugin = require('optimize-css-assets-webpack-plugin')
+const UglifyJsPlugin = require('uglifyjs-webpack-plugin')
+const path = require("path")
 
 const prodConfig = {
     mode: "production",
@@ -50,6 +52,11 @@ const prodConfig = {
             }
         },
         minimizer: [
+            new UglifyJsPlugin({
+                cache: true,//缓冲
+                parallel: true, //并发打包,一次打包多个
+                sourceMap:true,//源码调试
+            }),
             new OptimizeCssAssetsPlugin({})
         ]
     },

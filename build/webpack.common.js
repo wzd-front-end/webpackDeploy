@@ -1,7 +1,7 @@
-const path = require("path")
+
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 const CleanWebpackPlugin = require('clean-webpack-plugin')
-//
+// imports-loader 可以配置模块内this指向
 
 module.exports = {
     // 配置入口文件，前面的为名称，在打包输出的时候，可以根据名称生成对应名称的打包后输出文件
