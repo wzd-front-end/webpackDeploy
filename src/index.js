@@ -11,11 +11,13 @@
 //         document.body.appendChild(element)
 //     })
 // }
+import {add} from "./test.js"
+add()
 
 
-
-import {join} from 'lodash'
-console.log(join(['a', 'b', 'c'], '****'))
+// import {join, chunk} from 'lodash'
+// console.log(join(['a', 'b', 'c'], '****'))
+// console.log(chunk(['a', 'b', 'c', 'd'], 2))
 
 
 // import React, {Component} from 'react'

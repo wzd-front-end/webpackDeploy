@@ -103,9 +103,7 @@ module.exports = {
     optimization: {
         // 配置后，打包后会生成mainfest，是包与包之间的关系，webpack4之前需要这样配置，才不会因为每次打包生成的mainfest不用而导致hash值发生改变，这么是优化缓存
         // 配置后会把mainfest抽出一个单独的文件，这样就不会影响其他文件
-        runtimeChunk: {
-            name: 'runtime'
-        },
+
         // 有使用的导出才会被引入，删除多余的代码，在webpack4中，只要是production模式，都会自动开启Tree sharing
         usedExports: true,
         splitChunks: {
