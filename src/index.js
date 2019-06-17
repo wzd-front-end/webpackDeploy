@@ -11,8 +11,8 @@
 //         document.body.appendChild(element)
 //     })
 // }
-import {add} from "./test.js"
-add()
+// import {add} from "./test.js"
+// add()
 
 
 // import {join, chunk} from 'lodash'
@@ -20,16 +20,16 @@ add()
 // console.log(chunk(['a', 'b', 'c', 'd'], 2))
 
 
-// import React, {Component} from 'react'
-// import ReactDom from 'react-dom'
-//
-// class App extends Component {
-//     render() {
-//         return <div>Hello World</div>
-//     }
-// }
-//
-// ReactDom.render(<App/>, document.getElementById('root'))
+import React, {Component} from 'react'
+import ReactDom from 'react-dom'
+
+class App extends Component {
+    render() {
+        return <div>Hello World</div>
+    }
+}
+
+ReactDom.render(<App/>, document.getElementById('root'))
 
 
 // import avatar from './avatar.jpg'
