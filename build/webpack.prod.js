@@ -52,7 +52,9 @@ const prodConfig = {
             }
         },
         minimizer: [
+            // 原则上webpack 4.0以上版本，设置了mode: production模式后，会自动打开uglifyJsPlugin
             new UglifyJsPlugin({
+                test: /\.js($|\?)/i,
                 cache: true,//缓冲
                 parallel: true, //并发打包,一次打包多个
                 sourceMap:true,//源码调试
