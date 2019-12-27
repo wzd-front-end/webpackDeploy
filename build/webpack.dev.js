@@ -6,7 +6,7 @@ const path = require("path")
 const devConfig = {
     // 有两个值可以选择，development 和 production ，主要区别是，前者为开发环境，不使用压缩，且使用eval()执行，后者为生存环境，使用压缩减小文件大小
     mode: 'development',
-    // source-map 是一个映射关系，它知道dist目录下main.js文件实际上对应的是src目录下index.js文件中的具体一行
+    // source-map 是一个源代码和目标代码的映射关系，它知道dist目录下main.js文件实际上对应的是src目录下index.js文件中的具体一行
     // inline 会把映射关系source-map变成base64格式放在打包后文件底部
     // cheap  报错只告诉你哪一行出错了，不精确到那一列，提升打包性能，用了cheap后source-map只针对业务代码，不管其他第三方的模块
     // module 不仅管业务代码的错误，还管其他第三方模块的一些错误，映射错误所在位置

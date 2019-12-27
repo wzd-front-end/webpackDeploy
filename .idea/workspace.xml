@@ -1,10 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="b89f97b9-d740-4864-9f4b-693231af739a" name="Default Changelist" comment="">
+    <list default="true" id="b89f97b9-d740-4864-9f4b-693231af739a" name="Default Changelist" comment="分开开发环境和配置环境">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/webpack.dev.js" beforeDir="false" afterPath="$PROJECT_DIR$/build/webpack.dev.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/webpack.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/webpack.config.js" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -15,71 +16,31 @@
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="FUSProjectUsageTrigger">
-    <session id="-1158709066">
-      <usages-collector id="statistics.lifecycle.project">
-        <counts>
-          <entry key="project.closed" value="9" />
-          <entry key="project.open.time.14" value="1" />
-          <entry key="project.open.time.19" value="2" />
-          <entry key="project.open.time.20" value="1" />
-          <entry key="project.open.time.26" value="1" />
-          <entry key="project.open.time.31" value="1" />
-          <entry key="project.open.time.36" value="1" />
-          <entry key="project.open.time.37" value="1" />
-          <entry key="project.open.time.45" value="1" />
-          <entry key="project.open.time.7" value="1" />
-          <entry key="project.opened" value="10" />
-        </counts>
-      </usages-collector>
-      <usages-collector id="statistics.file.extensions.open">
-        <counts>
-          <entry key="babelrc" value="1" />
-          <entry key="html" value="4" />
-          <entry key="js" value="28" />
-          <entry key="map" value="1" />
-          <entry key="md" value="1" />
-        </counts>
-      </usages-collector>
-      <usages-collector id="statistics.file.types.open">
-        <counts>
-          <entry key="HTML" value="4" />
-          <entry key="JSON" value="1" />
-          <entry key="JavaScript" value="28" />
-          <entry key="PLAIN_TEXT" value="1" />
-          <entry key="SourceMap" value="1" />
-        </counts>
-      </usages-collector>
-      <usages-collector id="statistics.file.extensions.edit">
-        <counts>
-          <entry key="babelrc" value="13" />
-          <entry key="html" value="28" />
-          <entry key="js" value="2217" />
-          <entry key="md" value="452" />
-          <entry key="txt" value="64" />
-        </counts>
-      </usages-collector>
-      <usages-collector id="statistics.file.types.edit">
-        <counts>
-          <entry key="HTML" value="28" />
-          <entry key="JSON" value="13" />
-          <entry key="JavaScript" value="2217" />
-          <entry key="Markdown" value="449" />
-          <entry key="PLAIN_TEXT" value="67" />
-        </counts>
-      </usages-collector>
-    </session>
-  </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/README.md">
-          <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-            <state split_layout="SPLIT">
-              <first_editor relative-caret-position="665">
-                <caret line="35" column="19" selection-start-line="35" selection-start-column="19" selection-end-line="35" selection-end-column="19" />
-              </first_editor>
-              <second_editor />
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/package.json">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-396">
+              <caret line="12" column="10" selection-start-line="12" selection-start-column="5" selection-end-line="12" selection-end-column="10" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/.babelrc">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="132">
+              <caret line="6" column="7" selection-start-line="6" selection-start-column="7" selection-end-line="6" selection-end-column="7" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/build/webpack.prod.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state>
+              <caret column="38" selection-start-column="38" selection-end-column="38" />
             </state>
           </provider>
         </entry>
@@ -87,8 +48,57 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/build/webpack.common.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1314">
-              <caret line="99" column="6" selection-start-line="99" selection-start-column="6" selection-end-line="99" selection-end-column="6" />
+            <state relative-caret-position="264">
+              <caret line="87" column="15" selection-start-line="87" selection-start-column="15" selection-end-line="87" selection-end-column="15" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/webpack.config.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="638">
+              <caret line="29" column="7" lean-forward="true" selection-start-line="29" selection-start-column="7" selection-end-line="29" selection-end-column="7" />
+              <folding>
+                <element signature="e#894#2052#0" />
+                <element signature="e#2123#6037#0" />
+                <element signature="e#6184#6357#0" />
+                <element signature="e#6377#6487#0" />
+                <element signature="e#6501#6619#0" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/index.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="88">
+              <caret line="4" column="22" selection-start-line="4" selection-start-column="22" selection-end-line="4" selection-end-column="22" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/index.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="242">
+              <caret line="11" selection-start-line="11" selection-end-line="11" />
+              <folding>
+                <element signature="e#0#39#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/build/webpack.dev.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="447">
+              <caret line="46" column="47" selection-start-line="46" selection-start-column="47" selection-end-line="46" selection-end-column="47" />
+              <folding>
+                <element signature="e#1937#2961#0" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -113,6 +123,10 @@
       <find>path</find>
       <find>join</find>
       <find>r</find>
+      <find>__webpack_require__</find>
+      <find>clean-webpack-plugin</find>
+      <find>CleanWebpackPlugin</find>
+      <find>resolve</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -125,42 +139,29 @@
         <option value="$PROJECT_DIR$/style.css" />
         <option value="$PROJECT_DIR$/src/style.scss" />
         <option value="$PROJECT_DIR$/index.html" />
-        <option value="$PROJECT_DIR$/webpack.config.js" />
         <option value="$PROJECT_DIR$/build/webpack.pro.js" />
-        <option value="$PROJECT_DIR$/package.json" />
-        <option value="$PROJECT_DIR$/.babelrc" />
         <option value="$PROJECT_DIR$/dist/index.html" />
-        <option value="$PROJECT_DIR$/build/webpack.dev.js" />
-        <option value="$PROJECT_DIR$/build/webpack.prod.js" />
         <option value="$PROJECT_DIR$/src/module.js" />
         <option value="$PROJECT_DIR$/dist/main.c9accef229257b0f1fb5.js" />
         <option value="$PROJECT_DIR$/dist/main.2a22947da8cc3bb406b5.js" />
-        <option value="$PROJECT_DIR$/build/webpack.common.js" />
+        <option value="$PROJECT_DIR$/README.md" />
+        <option value="$PROJECT_DIR$/build/webpack.prod.js" />
         <option value="$PROJECT_DIR$/src/test.js" />
         <option value="$PROJECT_DIR$/src/index.js" />
-        <option value="$PROJECT_DIR$/README.md" />
+        <option value="$PROJECT_DIR$/.babelrc" />
+        <option value="$PROJECT_DIR$/build/webpack.dev.js" />
+        <option value="$PROJECT_DIR$/package.json" />
+        <option value="$PROJECT_DIR$/src/index.html" />
+        <option value="$PROJECT_DIR$/build/webpack.common.js" />
+        <option value="$PROJECT_DIR$/webpack.config.js" />
       </list>
     </option>
   </component>
-  <component name="JsBuildToolGruntFileManager" detection-done="true" sorting="DEFINITION_ORDER" />
-  <component name="JsBuildToolPackageJson" detection-done="true" sorting="DEFINITION_ORDER" />
-  <component name="JsGulpfileManager">
-    <detection-done>true</detection-done>
-    <sorting>DEFINITION_ORDER</sorting>
-  </component>
-  <component name="NodeModulesDirectoryManager">
-    <handled-path value="$PROJECT_DIR$/node_modules" />
-  </component>
-  <component name="NodePackageJsonFileManager">
-    <packageJsonPaths>
-      <path value="$PROJECT_DIR$/package.json" />
-    </packageJsonPaths>
-  </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="1632" />
-    <option name="y" value="133" />
-    <option name="width" value="2160" />
-    <option name="height" value="1169" />
+    <option name="x" value="-8" />
+    <option name="y" value="-8" />
+    <option name="width" value="1936" />
+    <option name="height" value="1056" />
   </component>
   <component name="ProjectView">
     <navigator proportions="" version="1">
@@ -174,21 +175,6 @@
               <item name="webpack" type="b2602c69:ProjectViewProjectNode" />
               <item name="webpack" type="462c0819:PsiDirectoryNode" />
             </path>
-            <path>
-              <item name="webpack" type="b2602c69:ProjectViewProjectNode" />
-              <item name="webpack" type="462c0819:PsiDirectoryNode" />
-              <item name="build" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="webpack" type="b2602c69:ProjectViewProjectNode" />
-              <item name="webpack" type="462c0819:PsiDirectoryNode" />
-              <item name="dist" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="webpack" type="b2602c69:ProjectViewProjectNode" />
-              <item name="webpack" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-            </path>
           </expand>
           <select />
         </subPane>
@@ -200,7 +186,7 @@
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="D:/wzdCode/deputy" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
@@ -260,6 +246,14 @@
       <workItem from="1560694132551" duration="734000" />
       <workItem from="1560779069009" duration="369000" />
       <workItem from="1560779537441" duration="5404000" />
+      <workItem from="1560934745182" duration="4499000" />
+      <workItem from="1560996764690" duration="6333000" />
+      <workItem from="1562315497877" duration="1471000" />
+      <workItem from="1562742745453" duration="1273000" />
+      <workItem from="1562746918779" duration="16000" />
+      <workItem from="1564476501945" duration="1232000" />
+      <workItem from="1576049395129" duration="1089000" />
+      <workItem from="1577416764631" duration="19815000" />
     </task>
     <task id="LOCAL-00001" summary="npm init初始化，使之符合node的规范（webpack是基于node实现的）">
       <created>1558437307258</created>
@@ -359,17 +353,24 @@
       <option name="project" value="LOCAL" />
       <updated>1560069695531</updated>
     </task>
-    <option name="localTasksCounter" value="15" />
+    <task id="LOCAL-00015" summary="分开开发环境和配置环境">
+      <created>1562315520621</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1562315520621</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="58916000" />
+    <option name="totallyTimeSpent" value="95982000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="1359" y="-7" width="2062" height="1136" extended-state="6" />
+    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.12685093" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.17281349" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info id="npm" order="3" side_tool="true" />
@@ -382,7 +383,7 @@
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="8" weight="0.329718" />
-      <window_info anchor="bottom" id="Terminal" order="9" weight="0.33573636" />
+      <window_info anchor="bottom" id="Terminal" order="9" visible="true" weight="0.13774404" />
       <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -391,9 +392,6 @@
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
-  </component>
-  <component name="VcsContentAnnotationSettings">
-    <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="npm init初始化，使之符合node的规范（webpack是基于node实现的）" />
@@ -407,17 +405,11 @@
     <MESSAGE value="缓存和shimming" />
     <MESSAGE value="增加js压缩" />
     <MESSAGE value="完整版" />
-    <option name="LAST_COMMIT_MESSAGE" value="完整版" />
+    <MESSAGE value="分开开发环境和配置环境" />
+    <option name="LAST_COMMIT_MESSAGE" value="分开开发环境和配置环境" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/dist/e79528b642dc683d24970c85b523b177.jpg" />
-    <entry file="file://$PROJECT_DIR$/.gitignore">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="418">
-          <caret line="19" column="5" lean-forward="true" selection-start-line="19" selection-start-column="5" selection-end-line="19" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/font/iconfont.svg" />
     <entry file="file://$USER_HOME$/Downloads/download/font_1209729_3s96z5yjl03/iconfont.css" />
     <entry file="file://$USER_HOME$/Downloads/download/font_1209729_3s96z5yjl03/demo.css" />
@@ -430,13 +422,6 @@
     <entry file="file://$PROJECT_DIR$/build/dist/main.js" />
     <entry file="file://$PROJECT_DIR$/build/dist/index.html" />
     <entry file="file://$PROJECT_DIR$/src/main.js" />
-    <entry file="file://$PROJECT_DIR$/webpack.config.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3230">
-          <caret line="170" column="23" selection-start-line="170" selection-start-column="23" selection-end-line="170" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/postcss.config.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="38">
@@ -446,91 +431,142 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/dist/vendors~main.js" />
     <entry file="file://$PROJECT_DIR$/dist/0.js" />
-    <entry file="file://$PROJECT_DIR$/.babelrc">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="323">
-          <caret line="17" column="50" selection-start-line="17" selection-start-column="50" selection-end-line="17" selection-end-column="50" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/dist/vendors~main.e8a9849f4dc0943bcf9d.js.map" />
     <entry file="file://$PROJECT_DIR$/dist/vendors~main.e8a9849f4dc0943bcf9d.js" />
     <entry file="file://$PROJECT_DIR$/dist/main.73e5c44c91e99509d968.js" />
     <entry file="file://$PROJECT_DIR$/dist/vendors~main.c7754320899ac8cc2d57.js" />
-    <entry file="file://$PROJECT_DIR$/src/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="76">
-          <caret line="4" column="17" selection-start-line="4" selection-start-column="17" selection-end-line="4" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/dist/main.c9accef229257b0f1fb5.js" />
     <entry file="file://$PROJECT_DIR$/dist/main.2a22947da8cc3bb406b5.js" />
     <entry file="file://$PROJECT_DIR$/dist/main.ade2a04e99e89253ad03.js" />
-    <entry file="file://$PROJECT_DIR$/package.json">
+    <entry file="file://$PROJECT_DIR$/dist/vendorss~lodash .b7166d14bb19f2e09057.js" />
+    <entry file="file://$PROJECT_DIR$/dist/main.js" />
+    <entry file="file://$PROJECT_DIR$/dist/vendors~main.1387edd1709ffb770c81.js" />
+    <entry file="file://$APPLICATION_HOME_DIR$/plugins/JavaScriptLanguage/jsLanguageServicesImpl/external/react.d.ts">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="494">
-          <caret line="26" column="40" selection-start-line="26" selection-start-column="5" selection-end-line="26" selection-end-column="40" />
+        <state relative-caret-position="1242">
+          <caret line="298" column="8" selection-start-line="298" selection-start-column="8" selection-end-line="298" selection-end-column="8" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/build/webpack.dev.js">
+    <entry file="file://$PROJECT_DIR$/dist/main.9383f9d3120ee9a21a8f.js" />
+    <entry file="file://$PROJECT_DIR$/dist/vendors~main.d866e38fe10030fad7da.js" />
+    <entry file="file://$PROJECT_DIR$/dist/main.91d30ef300e8bd859216.js" />
+    <entry file="file://$PROJECT_DIR$/.gitignore">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="57">
-          <caret line="3" column="28" selection-start-line="3" selection-start-column="28" selection-end-line="3" selection-end-column="28" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/dist/main.js">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="133">
-          <caret line="7" selection-start-line="7" selection-end-line="7" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/dist/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="114">
-          <caret line="6" column="6" selection-start-line="6" selection-start-column="6" selection-end-line="6" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/index.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="95">
-          <caret line="5" column="9" selection-start-line="5" selection-start-column="9" selection-end-line="5" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/build/webpack.prod.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="56">
-          <caret line="38" column="13" selection-start-line="38" selection-start-column="13" selection-end-line="38" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/build/webpack.common.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1314">
-          <caret line="99" column="6" selection-start-line="99" selection-start-column="6" selection-end-line="99" selection-end-column="6" />
+        <state relative-caret-position="242">
+          <caret line="11" column="7" lean-forward="true" selection-start-line="11" selection-start-column="7" selection-end-line="11" selection-end-column="7" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/README.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="22">
+            <caret line="1" selection-start-line="1" selection-end-line="1" selection-end-column="32" />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
       <provider editor-type-id="text-editor">
         <state relative-caret-position="190">
           <caret line="10" lean-forward="true" selection-start-line="10" selection-end-line="10" />
         </state>
       </provider>
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor relative-caret-position="665">
-            <caret line="35" column="19" selection-start-line="35" selection-start-column="19" selection-end-line="35" selection-end-column="19" />
-          </first_editor>
-          <second_editor />
+    </entry>
+    <entry file="file://$USER_HOME$/AppData/Local/Temp/360zip$Temp/360$2/prod.env.js" />
+    <entry file="file://$USER_HOME$/AppData/Local/Temp/360zip$Temp/360$1/dev.env.js" />
+    <entry file="file://$USER_HOME$/AppData/Local/Temp/360zip$Temp/360$0/index.js" />
+    <entry file="file://$PROJECT_DIR$/src/test.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="762">
+          <caret line="67" selection-start-line="67" selection-end-line="67" />
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+            <element signature="e#638#677#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/dist/main.d733b4d0d158353e2dd9.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="22">
+          <caret line="1" column="53" lean-forward="true" selection-start-line="1" selection-start-column="53" selection-end-line="1" selection-end-column="53" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/build/webpack.prod.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="38" selection-start-column="38" selection-end-column="38" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="242">
+          <caret line="11" selection-start-line="11" selection-end-line="11" />
+          <folding>
+            <element signature="e#0#39#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/build/webpack.dev.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="447">
+          <caret line="46" column="47" selection-start-line="46" selection-start-column="47" selection-end-line="46" selection-end-column="47" />
+          <folding>
+            <element signature="e#1937#2961#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.babelrc">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="132">
+          <caret line="6" column="7" selection-start-line="6" selection-start-column="7" selection-end-line="6" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="88">
+          <caret line="4" column="22" selection-start-line="4" selection-start-column="22" selection-end-line="4" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/build/webpack.common.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="264">
+          <caret line="87" column="15" selection-start-line="87" selection-start-column="15" selection-end-line="87" selection-end-column="15" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/dist/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="15" selection-start-column="15" selection-end-column="15" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/package.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-396">
+          <caret line="12" column="10" selection-start-line="12" selection-start-column="5" selection-end-line="12" selection-end-column="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/webpack.config.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="638">
+          <caret line="29" column="7" lean-forward="true" selection-start-line="29" selection-start-column="7" selection-end-line="29" selection-end-column="7" />
+          <folding>
+            <element signature="e#894#2052#0" />
+            <element signature="e#2123#6037#0" />
+            <element signature="e#6184#6357#0" />
+            <element signature="e#6377#6487#0" />
+            <element signature="e#6501#6619#0" />
+          </folding>
         </state>
       </provider>
     </entry>
