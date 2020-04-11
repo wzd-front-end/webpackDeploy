@@ -4,7 +4,7 @@ const commonConfig = require('./webpack.common')
 const path = require("path")
 
 const devConfig = {
-    // 有两个值可以选择，development 和 production ，主要区别是，前者为开发环境，不使用压缩，且使用eval()执行，后者为生存环境，使用压缩减小文件大小
+    // 有两个值可以选择，development 和 production ，主要区别是，前者为开发环境，不使用压缩，且使用eval()执行，后者为生产环境，使用压缩减小文件大小
     mode: 'development',
     // source-map 是一个源代码和目标代码的映射关系，它知道dist目录下main.js文件实际上对应的是src目录下index.js文件中的具体一行
     // inline 会把映射关系source-map变成base64格式放在打包后文件底部
@@ -22,9 +22,9 @@ const devConfig = {
         // 设置访问端口号
         port: 8080,
         // 开启hot-module-replacement
-        hot: true
+        hot: true,
         // 就算不自动刷新浏览器也不刷新
-        // hotOnly: true
+        hotOnly: true
         // 代理
         // 如果需要代理多个地址，可将对象改为对象数组，并在每个对象中增加context数组，如下
         // proxy: [{

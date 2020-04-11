@@ -20,7 +20,6 @@ module.exports = {
                         name: '[name]_[hash].[ext]',
                         // 确定打包后输出文件所在的文件夹
                         outputPath: 'font/'
-                        // 临界值，确定是打包成文件还是base64字符串
                     }
                 }
             },
