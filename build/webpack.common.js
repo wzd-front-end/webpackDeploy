@@ -71,7 +71,8 @@ module.exports = {
                 //     [
                 //         '@babel/plugin-transform-runtime',
                 //         {
-                //              // 配置后，当页面中使用一些不存在的方法或对象的时候，才会把对应的打包进去
+                //              // 配置后，当页面中使用一些不存在的方法或对象的时候，才会把对应的打包进去,plugin-transform-runtime 已经默认包括了 @babel/polyfill，因此不用在独立引入。
+                //              // 如果你的全局有一个引入，不要让引入的库影响全局，那你就需要引把 corejs 设置成 2
                 //              "corejs": 2,
                 //              "helpers": true,
                 //              "regenerator": true,
