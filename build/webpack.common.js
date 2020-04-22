@@ -110,13 +110,13 @@ module.exports = {
         // 有使用的导出才会被引入，删除多余的代码，在webpack4中，只要是production模式，都会自动开启Tree sharing
         usedExports: true,
         splitChunks: {
-            // 对哪一些代码进行分割，配置值包括'all', 'asynx', 'initial',同步的进行代码分割，还需要配置cacheGroups
+            // 对哪一些代码进行分割，配置值包括'all', 'async', 'initial',同步的进行代码分割，还需要配置cacheGroups
             chunks: "all",
             // 配置代码分割的最小文件大小
             minSize: 30000,
             // // 配置后，如果打包后的文件大小超过该值，则会尝试把打包后的文件进行二次拆分，但不一样可以再次进行代码分割
             // maxSize: 0,
-            // 当一个模块被用了至少多少次的时候，才对它进行代码分割
+            // 当一个模块被用了至少多少次的时候，才对它进行代码分割，是指打包后的文件chunk中有多少个使用了该模块，而不是打包前
             minChunks: 1,
             // 异步加载的模块数的最大值，大于该值，不会在帮你进行代码分割
             maxAsyncRequests: 5,
@@ -132,7 +132,9 @@ module.exports = {
                 vendors: {
                     test: /[\\/]node_modules[\\/]/,
                     // 权值，值越大，优先级越高，指定打包后所走的文件打包路径
-                    priority: -10
+                    priority: -10,
+                    // 忽略默认参数，比如上面设置的minSize,minChunks等
+                    // enforce: true
                 },
                 default: {
                     minChunks: 2,
